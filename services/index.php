@@ -96,7 +96,10 @@ include $_SERVER['DOCUMENT_ROOT'] . '/includes/head.php';
 
         <!-- Dog Boarding Card -->
         <article class="service-card-with-image card-tint-1">
-          <img src="/assets/images/gbp-6-4622-9af7-147f52a3bb34.jpg" alt="Dog boarding facility at Dog Lady's Pet Camp" class="service-card__image" width="640" height="400" loading="lazy">
+          <picture>
+            <source type="image/avif" srcset="/assets/images/gbp-6-4622-9af7-147f52a3bb34-480.avif 480w, /assets/images/gbp-6-4622-9af7-147f52a3bb34-960.avif 960w" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 400px">
+            <img src="/assets/images/gbp-6-4622-9af7-147f52a3bb34.jpg" srcset="/assets/images/gbp-6-4622-9af7-147f52a3bb34-480.webp 480w, /assets/images/gbp-6-4622-9af7-147f52a3bb34-960.webp 960w" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 400px" alt="Dog boarding facility at Dog Lady's Pet Camp" class="service-card__image" width="640" height="400" loading="lazy">
+          </picture>
           <div class="service-card__body">
             <div class="service-card__icon">
               <?php icon('home', 32); ?>
@@ -116,7 +119,10 @@ include $_SERVER['DOCUMENT_ROOT'] . '/includes/head.php';
 
         <!-- Dog Grooming Card -->
         <article class="service-card-with-image card-tint-2">
-          <img src="/assets/images/gbp-6-4da1-8c25-669a111603aa.jpg" alt="Professional dog grooming at Dog Lady's Pet Camp" class="service-card__image" width="640" height="400" loading="lazy">
+          <picture>
+            <source type="image/avif" srcset="/assets/images/gbp-6-4da1-8c25-669a111603aa-480.avif 480w, /assets/images/gbp-6-4da1-8c25-669a111603aa-960.avif 960w" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 400px">
+            <img src="/assets/images/gbp-6-4da1-8c25-669a111603aa.jpg" srcset="/assets/images/gbp-6-4da1-8c25-669a111603aa-480.webp 480w, /assets/images/gbp-6-4da1-8c25-669a111603aa-960.webp 960w" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 400px" alt="Professional dog grooming at Dog Lady's Pet Camp" class="service-card__image" width="640" height="400" loading="lazy">
+          </picture>
           <div class="service-card__body">
             <div class="service-card__icon">
               <?php icon('scissors', 32); ?>
@@ -136,7 +142,10 @@ include $_SERVER['DOCUMENT_ROOT'] . '/includes/head.php';
 
         <!-- Bath & Blow Dry Card -->
         <article class="service-card-with-image card-tint-3">
-          <img src="/assets/images/gbp-6-4622-9af7-147f52a3bb34.jpg" alt="Dog bath and blow dry service" class="service-card__image" width="640" height="400" loading="lazy">
+          <picture>
+            <source type="image/avif" srcset="/assets/images/gbp-6-4622-9af7-147f52a3bb34-480.avif 480w, /assets/images/gbp-6-4622-9af7-147f52a3bb34-960.avif 960w" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 400px">
+            <img src="/assets/images/gbp-6-4622-9af7-147f52a3bb34.jpg" srcset="/assets/images/gbp-6-4622-9af7-147f52a3bb34-480.webp 480w, /assets/images/gbp-6-4622-9af7-147f52a3bb34-960.webp 960w" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 400px" alt="Dog bath and blow dry service" class="service-card__image" width="640" height="400" loading="lazy">
+          </picture>
           <div class="service-card__body">
             <div class="service-card__icon">
               <?php icon('droplets', 32); ?>
@@ -156,7 +165,10 @@ include $_SERVER['DOCUMENT_ROOT'] . '/includes/head.php';
 
         <!-- Brush-Out & Undercoat Removal Card -->
         <article class="service-card-with-image card-tint-1">
-          <img src="/assets/images/gbp-6-4da1-8c25-669a111603aa.jpg" alt="Dog undercoat removal and brush-out service" class="service-card__image" width="640" height="400" loading="lazy">
+          <picture>
+            <source type="image/avif" srcset="/assets/images/gbp-6-4da1-8c25-669a111603aa-480.avif 480w, /assets/images/gbp-6-4da1-8c25-669a111603aa-960.avif 960w" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 400px">
+            <img src="/assets/images/gbp-6-4da1-8c25-669a111603aa.jpg" srcset="/assets/images/gbp-6-4da1-8c25-669a111603aa-480.webp 480w, /assets/images/gbp-6-4da1-8c25-669a111603aa-960.webp 960w" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 400px" alt="Dog undercoat removal and brush-out service" class="service-card__image" width="640" height="400" loading="lazy">
+          </picture>
           <div class="service-card__body">
             <div class="service-card__icon">
               <?php icon('layers', 32); ?>
@@ -176,7 +188,10 @@ include $_SERVER['DOCUMENT_ROOT'] . '/includes/head.php';
 
         <!-- Nail Trimming Card -->
         <article class="service-card-with-image card-tint-2">
-          <img src="/assets/images/gbp-6-4622-9af7-147f52a3bb34.jpg" alt="Dog nail trimming service" class="service-card__image" width="640" height="400" loading="lazy">
+          <picture>
+            <source type="image/avif" srcset="/assets/images/gbp-6-4622-9af7-147f52a3bb34-480.avif 480w, /assets/images/gbp-6-4622-9af7-147f52a3bb34-960.avif 960w" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 400px">
+            <img src="/assets/images/gbp-6-4622-9af7-147f52a3bb34.jpg" srcset="/assets/images/gbp-6-4622-9af7-147f52a3bb34-480.webp 480w, /assets/images/gbp-6-4622-9af7-147f52a3bb34-960.webp 960w" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 400px" alt="Dog nail trimming service" class="service-card__image" width="640" height="400" loading="lazy">
+          </picture>
           <div class="service-card__body">
             <div class="service-card__icon">
               <?php icon('check-circle', 32); ?>

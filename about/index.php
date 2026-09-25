@@ -46,7 +46,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/includes/head.php';
   .about-values .value-card p { color: var(--color-ink-2); line-height: 1.6; }
 </style>
 
-<?php include $_SERVER['DOCUMENT_ROOT' . '/includes/header.php'; ?>
+<?php include $_SERVER['DOCUMENT_ROOT'] . '/includes/header.php'; ?>
 
 <main id="main-content">
 

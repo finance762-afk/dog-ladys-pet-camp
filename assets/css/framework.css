@@ -83,6 +83,8 @@
   --font-size-xs: .75rem; --font-size-sm: .875rem; --font-size-base: 1rem; --font-size-lg: 1.125rem;
   --font-size-xl: 1.25rem; --font-size-2xl: var(--fs-h3); --font-size-3xl: var(--fs-h2); --font-size-4xl: var(--fs-h1);
   --font-size-5xl: var(--fs-h1); --font-size-6xl: var(--fs-h1);
+  /* Short aliases for --font-size-* (QA requires both forms) */
+  --fs-base: var(--font-size-base); --fs-sm: var(--font-size-sm); --fs-lg: var(--font-size-lg); --fs-xl: var(--font-size-xl);
 
   /* Layout */
   --measure: 62ch; --content-width: 62ch;
