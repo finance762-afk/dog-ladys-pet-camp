@@ -15,6 +15,25 @@ $tier        = 'basic';                            // build-plan.json tier — g
 $industry    = 'other';                            // pet boarding & grooming (dogs only)
 $description = "Dog Lady's Pet Camp is a dogs-only boarding and grooming facility at 4265 Pennyroyal Rd in Franklin, Ohio, serving Franklin-area pet owners since 2000. Services include overnight kennel boarding and professional dog grooming for dogs of all breeds and sizes.";
 
+/* ---------- PHOTOS — CLIENT PHOTO SLOT ----------
+ * Status (2026-09-25): the client has supplied ONE usable photo. The two GBP
+ * cover files in /assets/images/ (gbp-6-4622-9af7-147f52a3bb34.* and
+ * gbp-6-4da1-8c25-669a111603aa.*) are byte-identical copies of the same dog
+ * on grass. To avoid "one picture 100 times", it is used exactly ONCE on the
+ * whole site: the homepage hero (index.php). Every other image position uses a
+ * branded icon panel (.svc-cover on the home + /services/ cards, .about-panel
+ * on the home about split) or the photo-free .hero--interior variant.
+ *
+ * WHEN APRIL SENDS PHOTOS:
+ *   1. Drop originals in /assets/images/ and generate -480/-960/-1600 .webp +
+ *      .avif variants (same naming as the gbp-6-* files).
+ *   2. Fill the "CLIENT PHOTO SLOT" comments in: index.php (service cards,
+ *      about split), services/index.php (hub cards), and the five service
+ *      pages (dog-boarding-overnight-kennel, dog-grooming, bath-blow-dry,
+ *      brush-out-undercoat-removal, nail-trimming) if a photo-led hero is wanted.
+ *   3. Never use a photo more than once per page; stock photos are forbidden.
+ * ------------------------------------------------- */
+
 /* ---------- Domain / URLs ---------- */
 // build-plan.json has no production_domain → default to the preview host.
 $domain   = 'dog-ladys-pet-camp.pageone.cloud';

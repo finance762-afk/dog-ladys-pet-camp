@@ -11,9 +11,22 @@ $pageDescription = "Dog Lady's Pet Camp is a dogs-only boarding and grooming fac
 $metaDescription = $pageDescription;   // head.php reads $metaDescription
 $canonicalUrl    = $siteUrl . '/';
 
-/* Allocated homepage hero photo (image manifest — cover) */
+/* ---------------------------------------------------------------------------
+ * PHOTOS — CLIENT PHOTO SLOT (read this before adding images)
+ * The client supplied ONE usable photo (the two GBP cover files
+ * gbp-6-4622-… and gbp-6-4da1-… are byte-identical copies of the same dog on
+ * grass). It is used exactly ONCE on this page: the hero below. The service
+ * cards and the about split deliberately use branded icon panels instead of
+ * repeating it. When April sends real photos, see the "CLIENT PHOTO SLOT"
+ * comments at the service cards and the about split, and the PHOTOS block in
+ * includes/config.php.
+ * ------------------------------------------------------------------------- */
 $heroImage    = 'gbp-6-4622-9af7-147f52a3bb34.jpg';
-$heroImageAlt = "Dog Lady's Pet Camp — dogs-only boarding and grooming in Franklin, Ohio";
+$heroImageAlt = "A freshly groomed dog sitting on the grass at Dog Lady's Pet Camp in Franklin, OH";
+$heroPreload  = [
+    'srcset' => '/assets/images/gbp-6-4622-9af7-147f52a3bb34-480.avif 480w, /assets/images/gbp-6-4622-9af7-147f52a3bb34-960.avif 960w',
+    'sizes'  => '(max-width: 900px) 100vw, 50vw',
+];
 
 /* Homepage FAQs — grounded in this business's real services & intake (no invented features) */
 $homeFaqs = [
@@ -99,8 +112,25 @@ include $_SERVER['DOCUMENT_ROOT'] . '/includes/head.php';
     width: 62%; aspect-ratio: 1; border: 2px solid var(--color-accent); border-radius: var(--radius-lg);
     z-index: 0; pointer-events: none;
   }
-  .home-about .about-photo { position: relative; z-index: 1; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-lg); }
-  .home-about .about-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  /* Branded service-card covers — one client photo on file, so a brand-coloured
+     panel with the service icon stands in for a photo (same pattern as other v7 builds). */
+  .home-services .svc-cover { position: absolute; inset: 0; display: grid; place-items: center; overflow: hidden; }
+  .home-services .svc-cover svg { width: 76px; height: 76px; color: rgba(255,255,255,.94); position: relative; z-index: 1; }
+  .home-services .svc-cover::before { content: ""; position: absolute; inset: 0; background: radial-gradient(130% 120% at 12% 0%, rgba(255,255,255,.22), transparent 55%); }
+  .home-services .svc-cover::after { content: ""; position: absolute; right: -30px; bottom: -30px; width: 150px; height: 150px; border: 18px solid rgba(255,255,255,.10); border-radius: 50%; }
+  .home-services .svc-cover--1 { background: linear-gradient(140deg, color-mix(in srgb, var(--color-primary) 82%, black), var(--color-primary)); }
+  .home-services .svc-cover--2 { background: linear-gradient(140deg, var(--color-secondary), color-mix(in srgb, var(--color-secondary) 62%, black)); }
+  .home-services .svc-cover--3 { background: linear-gradient(140deg, var(--color-accent), var(--color-accent-dark)); }
+  .home-services .services-grid--featured > :first-child .svc-cover svg { width: 110px; height: 110px; }
+  /* About split — branded panel stands in for a second photo until client photos arrive */
+  .home-about .about-panel { position: relative; z-index: 1; border-radius: var(--radius-lg); overflow: hidden; padding: clamp(1.5rem, 3vw, 2.25rem); color: #fff; background: linear-gradient(150deg, var(--color-primary), color-mix(in srgb, var(--color-primary) 55%, black)); box-shadow: var(--shadow-lg); display: grid; gap: 1rem; }
+  .home-about .about-panel__eyebrow { font-family: var(--font-accent); font-weight: 700; letter-spacing: .14em; text-transform: uppercase; font-size: .78rem; color: var(--color-accent-bright); }
+  .home-about .about-panel__quote { font-family: var(--font-heading); font-weight: 800; font-size: 1.45rem; line-height: 1.25; margin: 0; color: #fff; }
+  .home-about .about-panel__list { list-style: none; margin: 0; padding: .4rem 0 0; display: grid; gap: .7rem; border-top: 1px solid rgba(255,255,255,.16); }
+  .home-about .about-panel__list li { display: flex; gap: .6rem; align-items: flex-start; font-size: .95rem; color: rgba(255,255,255,.9); }
+  .home-about .about-panel__list svg { color: var(--color-accent-bright); flex: 0 0 auto; margin-top: 2px; }
+  .home-about .about-right .about-stat-card { color: var(--color-ink); }
+  @media (max-width: 900px) { .home-about .about-right .about-stat-card { position: static; margin: 1rem 0 0; width: max-content; } }
   .home-cta { background: linear-gradient(115deg, var(--color-dark) 0%, var(--color-dark-alt) 55%, var(--color-primary-deep) 130%); color: #fff; }
   .home-cta h2, .home-cta p { color: #fff; }
   .home-estimate .estimate-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(var(--space-lg), 4vw, var(--space-3xl)); align-items: start; }
@@ -244,15 +274,16 @@ include $_SERVER['DOCUMENT_ROOT'] . '/includes/header.php';
         $featured = ($i === 0) ? ' data-featured-label="Most requested"' : '';
       ?>
       <article class="service-card-with-image card-tint-<?php echo $tint; ?> reveal-up reveal-delay-<?php echo $delay; ?>"<?php echo $featured; ?>>
+        <?php /* CLIENT PHOTO SLOT — service cards.
+                 Only one client photo exists today, so each card shows a branded icon
+                 panel. Once April sends photos, add a 'photo' key per card in
+                 $homeServiceCards above (e.g. 'photo' => 'boarding-kennel.jpg', plus
+                 -480/-960/-1600 webp+avif variants in /assets/images/) and replace the
+                 .svc-cover span below with a <picture> (source avif srcset + img webp
+                 srcset, width="600" height="360", loading="lazy" decoding="async",
+                 alt "<service> at Dog Lady's Pet Camp in Franklin, OH"). */ ?>
         <div class="service-card__image">
-          <picture>
-            <source type="image/avif" srcset="/assets/images/gbp-6-4622-9af7-147f52a3bb34-480.avif 480w, /assets/images/gbp-6-4622-9af7-147f52a3bb34-960.avif 960w" sizes="(max-width: 600px) 100vw, (max-width: 1199px) 50vw, 25vw">
-            <img src="/assets/images/<?php echo $heroImage; ?>"
-                 srcset="/assets/images/gbp-6-4622-9af7-147f52a3bb34-480.webp 480w, /assets/images/gbp-6-4622-9af7-147f52a3bb34-960.webp 960w"
-                 sizes="(max-width: 600px) 100vw, (max-width: 1199px) 50vw, 25vw"
-                 alt="<?php echo htmlspecialchars($sc['name']); ?> at Dog Lady's Pet Camp in Franklin, OH"
-                 width="600" height="360" loading="lazy" decoding="async">
-          </picture>
+          <span class="svc-cover svc-cover--<?php echo $tint; ?>" aria-hidden="true"><?php icon($sc['icon'], 76); ?></span>
         </div>
         <div class="service-card__body">
           <div class="service-card__icon"><?php icon($sc['icon'], 26); ?></div>
@@ -302,16 +333,22 @@ include $_SERVER['DOCUMENT_ROOT'] . '/includes/header.php';
         </ol>
       </div>
 
-      <div class="about-right">
-        <div class="about-photo">
-          <picture>
-            <source type="image/avif" srcset="/assets/images/gbp-6-4da1-8c25-669a111603aa-480.avif 480w, /assets/images/gbp-6-4da1-8c25-669a111603aa-960.avif 960w" sizes="(max-width: 900px) 100vw, 50vw">
-            <img src="/assets/images/gbp-6-4da1-8c25-669a111603aa.jpg"
-                 srcset="/assets/images/gbp-6-4da1-8c25-669a111603aa-480.webp 480w, /assets/images/gbp-6-4da1-8c25-669a111603aa-960.webp 960w"
-                 sizes="(max-width: 900px) 100vw, 50vw"
-                 alt="A well-cared-for dog at Dog Lady's Pet Camp in Franklin, Ohio"
-                 width="408" height="482" loading="lazy" decoding="async">
-          </picture>
+      <div class="about-right reveal-right">
+        <?php /* CLIENT PHOTO SLOT — about split.
+                 The second GBP file is a byte-identical copy of the hero photo, so this
+                 column shows a branded panel rather than the same dog twice. When a
+                 photo of April / the Pennyroyal Rd facility arrives, replace .about-panel
+                 with <div class="about-photo"><picture>…</picture></div> (width="408"
+                 height="482", loading="lazy" decoding="async", alt mentioning Franklin, OH)
+                 and restore the .about-photo rules in the page <style>. */ ?>
+        <div class="about-panel">
+          <span class="about-panel__eyebrow">Owner-operated since 2000</span>
+          <p class="about-panel__quote">One person who knows your dog by name, from drop-off to pickup.</p>
+          <ul class="about-panel__list">
+            <li><?php icon('users', 20); ?><span>April Davidson handles every stay and every groom herself</span></li>
+            <li><?php icon('home', 20); ?><span>Dogs-only facility on Pennyroyal Rd in Franklin, OH</span></li>
+            <li><?php icon('scissors', 20); ?><span>Boarding, grooming, or both in one visit</span></li>
+          </ul>
         </div>
         <div class="about-stat-card">
           <span class="stat-number"><span>26</span>+ yrs</span>

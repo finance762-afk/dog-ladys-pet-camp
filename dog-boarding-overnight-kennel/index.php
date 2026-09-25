@@ -13,8 +13,11 @@ $metaDescription = $pageDescription;
 $canonicalUrl    = $siteUrl . '/dog-boarding-overnight-kennel/';
 
 /* Hero image */
-$heroImage    = 'gbp-6-4622-9af7-147f52a3bb34.jpg';
-$heroImageAlt = "Dog boarding facility at Dog Lady's Pet Camp in Franklin, Ohio";
+/* CLIENT PHOTO SLOT — this page uses the photo-free .hero--interior variant
+   (only one client photo exists and it is used once, on the homepage hero).
+   When a photo for this service arrives, add it to /assets/images/ with
+   -480/-960/-1600 webp+avif variants and switch the hero to .hero-grid--visual
+   with a <picture> (loading="eager" fetchpriority="high", alt mentioning Franklin, OH). */
 
 /* Service-specific FAQs */
 $serviceFaqs = [
@@ -80,8 +83,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/includes/head.php';
 
 <!-- Page-specific styles -->
 <style id="boarding-page-styles">
-  .boarding-hero { background: var(--color-paper); min-height: 460px; }
-  .boarding-hero .hero-visual__img { object-position: 50% 40%; }
+  .boarding-hero { background: var(--color-paper); }
   .boarding-process .process-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: var(--space-xl); margin-top: var(--space-2xl); }
   .boarding-process .process-step { background: var(--color-surface); border: 1px solid var(--color-line); border-radius: var(--radius-lg); padding: var(--space-xl); position: relative; }
   .boarding-process .process-step::before {

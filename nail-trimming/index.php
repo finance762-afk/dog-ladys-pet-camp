@@ -13,8 +13,11 @@ $metaDescription = $pageDescription;
 $canonicalUrl    = $siteUrl . '/nail-trimming/';
 
 /* Hero image */
-$heroImage    = 'gbp-6-4622-9af7-147f52a3bb34.jpg';
-$heroImageAlt = "Dog nail trimming service at Dog Lady's Pet Camp";
+/* CLIENT PHOTO SLOT — this page uses the photo-free .hero--interior variant
+   (only one client photo exists and it is used once, on the homepage hero).
+   When a photo for this service arrives, add it to /assets/images/ with
+   -480/-960/-1600 webp+avif variants and switch the hero to .hero-grid--visual
+   with a <picture> (loading="eager" fetchpriority="high", alt mentioning Franklin, OH). */
 
 /* Service-specific FAQs */
 $serviceFaqs = [
@@ -72,7 +75,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/includes/head.php';
 
 <!-- Page-specific styles -->
 <style id="nails-page-styles">
-  .nails-hero { background: var(--color-paper); min-height: 400px; }
+  .nails-hero { background: var(--color-paper); }
   .nails-why .why-list { display: grid; gap: var(--space-md); margin-top: var(--space-xl); }
   .nails-why .why-item { display: flex; gap: var(--space-md); align-items: start; padding: var(--space-lg); background: var(--color-surface); border-radius: var(--radius); }
   .nails-why .why-item svg { color: var(--color-accent); flex-shrink: 0; margin-top: 0.2rem; }

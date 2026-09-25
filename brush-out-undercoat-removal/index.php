@@ -13,8 +13,11 @@ $metaDescription = $pageDescription;
 $canonicalUrl    = $siteUrl . '/brush-out-undercoat-removal/';
 
 /* Hero image */
-$heroImage    = 'gbp-6-4da1-8c25-669a111603aa.jpg';
-$heroImageAlt = "Dog brush-out and undercoat removal service at Dog Lady's Pet Camp";
+/* CLIENT PHOTO SLOT — this page uses the photo-free .hero--interior variant
+   (only one client photo exists and it is used once, on the homepage hero).
+   When a photo for this service arrives, add it to /assets/images/ with
+   -480/-960/-1600 webp+avif variants and switch the hero to .hero-grid--visual
+   with a <picture> (loading="eager" fetchpriority="high", alt mentioning Franklin, OH). */
 
 /* Service-specific FAQs */
 $serviceFaqs = [
@@ -72,7 +75,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/includes/head.php';
 
 <!-- Page-specific styles -->
 <style id="brushout-page-styles">
-  .brushout-hero { background: var(--color-surface); min-height: 420px; }
+  .brushout-hero { background: var(--color-surface); }
   .brushout-benefits .benefit-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: var(--space-lg); margin-top: var(--space-2xl); }
   .brushout-benefits .benefit-card { background: var(--color-paper); padding: var(--space-lg); border-radius: var(--radius-lg); border-left: 3px solid var(--color-accent); }
   .brushout-benefits .benefit-card h3 { font-size: var(--fs-base); font-weight: 700; margin-bottom: var(--space-sm); color: var(--color-ink); display: flex; align-items: center; gap: var(--space-sm); }

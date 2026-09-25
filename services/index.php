@@ -41,7 +41,15 @@ include $_SERVER['DOCUMENT_ROOT'] . '/includes/head.php';
   .services-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: var(--space-xl); margin-top: var(--space-2xl); }
   .service-card-with-image { background: var(--color-paper); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow); transition: transform 0.2s, box-shadow 0.2s; }
   .service-card-with-image:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
-  .service-card__image { width: 100%; aspect-ratio: 16/10; object-fit: cover; }
+  .service-card__image { position: relative; width: 100%; aspect-ratio: 16/10; overflow: hidden; }
+  /* Branded covers — a brand-coloured panel with the service icon stands in for a photo */
+  .svc-cover { position: absolute; inset: 0; display: grid; place-items: center; overflow: hidden; }
+  .svc-cover svg { width: 76px; height: 76px; color: rgba(255,255,255,.94); position: relative; z-index: 1; }
+  .svc-cover::before { content: ""; position: absolute; inset: 0; background: radial-gradient(130% 120% at 12% 0%, rgba(255,255,255,.22), transparent 55%); }
+  .svc-cover::after { content: ""; position: absolute; right: -30px; bottom: -30px; width: 150px; height: 150px; border: 18px solid rgba(255,255,255,.10); border-radius: 50%; }
+  .svc-cover--1 { background: linear-gradient(140deg, color-mix(in srgb, var(--color-primary) 82%, black), var(--color-primary)); }
+  .svc-cover--2 { background: linear-gradient(140deg, var(--color-secondary), color-mix(in srgb, var(--color-secondary) 62%, black)); }
+  .svc-cover--3 { background: linear-gradient(140deg, var(--color-accent), var(--color-accent-dark)); }
   .service-card__body { padding: var(--space-lg); }
   .service-card__icon { color: var(--color-accent); margin-bottom: var(--space-sm); }
   .service-card__body h3 { font-size: var(--fs-lg); font-weight: 700; margin-bottom: var(--space-sm); color: var(--color-ink); }
@@ -92,14 +100,19 @@ include $_SERVER['DOCUMENT_ROOT'] . '/includes/head.php';
         </p>
       </div>
 
+      <?php /* CLIENT PHOTO SLOT — services hub cards.
+               One client photo exists today (used once, on the homepage hero), so each
+               card shows a branded icon panel. When April sends photos, replace each
+               .svc-cover span with a <picture> (avif source + webp srcset from
+               /assets/images/<name>-480/-960/-1600, width="640" height="400",
+               loading="lazy" decoding="async", alt mentioning Franklin, OH). */ ?>
       <div class="services-grid">
 
         <!-- Dog Boarding Card -->
         <article class="service-card-with-image card-tint-1">
-          <picture>
-            <source type="image/avif" srcset="/assets/images/gbp-6-4622-9af7-147f52a3bb34-480.avif 480w, /assets/images/gbp-6-4622-9af7-147f52a3bb34-960.avif 960w" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 400px">
-            <img src="/assets/images/gbp-6-4622-9af7-147f52a3bb34.jpg" srcset="/assets/images/gbp-6-4622-9af7-147f52a3bb34-480.webp 480w, /assets/images/gbp-6-4622-9af7-147f52a3bb34-960.webp 960w" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 400px" alt="Dog boarding facility at Dog Lady's Pet Camp" class="service-card__image" width="640" height="400" loading="lazy">
-          </picture>
+          <div class="service-card__image">
+            <span class="svc-cover svc-cover--1" aria-hidden="true"><?php icon('home', 76); ?></span>
+          </div>
           <div class="service-card__body">
             <div class="service-card__icon">
               <?php icon('home', 32); ?>
@@ -119,10 +132,9 @@ include $_SERVER['DOCUMENT_ROOT'] . '/includes/head.php';
 
         <!-- Dog Grooming Card -->
         <article class="service-card-with-image card-tint-2">
-          <picture>
-            <source type="image/avif" srcset="/assets/images/gbp-6-4da1-8c25-669a111603aa-480.avif 480w, /assets/images/gbp-6-4da1-8c25-669a111603aa-960.avif 960w" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 400px">
-            <img src="/assets/images/gbp-6-4da1-8c25-669a111603aa.jpg" srcset="/assets/images/gbp-6-4da1-8c25-669a111603aa-480.webp 480w, /assets/images/gbp-6-4da1-8c25-669a111603aa-960.webp 960w" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 400px" alt="Professional dog grooming at Dog Lady's Pet Camp" class="service-card__image" width="640" height="400" loading="lazy">
-          </picture>
+          <div class="service-card__image">
+            <span class="svc-cover svc-cover--2" aria-hidden="true"><?php icon('scissors', 76); ?></span>
+          </div>
           <div class="service-card__body">
             <div class="service-card__icon">
               <?php icon('scissors', 32); ?>
@@ -142,10 +154,9 @@ include $_SERVER['DOCUMENT_ROOT'] . '/includes/head.php';
 
         <!-- Bath & Blow Dry Card -->
         <article class="service-card-with-image card-tint-3">
-          <picture>
-            <source type="image/avif" srcset="/assets/images/gbp-6-4622-9af7-147f52a3bb34-480.avif 480w, /assets/images/gbp-6-4622-9af7-147f52a3bb34-960.avif 960w" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 400px">
-            <img src="/assets/images/gbp-6-4622-9af7-147f52a3bb34.jpg" srcset="/assets/images/gbp-6-4622-9af7-147f52a3bb34-480.webp 480w, /assets/images/gbp-6-4622-9af7-147f52a3bb34-960.webp 960w" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 400px" alt="Dog bath and blow dry service" class="service-card__image" width="640" height="400" loading="lazy">
-          </picture>
+          <div class="service-card__image">
+            <span class="svc-cover svc-cover--3" aria-hidden="true"><?php icon('droplets', 76); ?></span>
+          </div>
           <div class="service-card__body">
             <div class="service-card__icon">
               <?php icon('droplets', 32); ?>
@@ -165,10 +176,9 @@ include $_SERVER['DOCUMENT_ROOT'] . '/includes/head.php';
 
         <!-- Brush-Out & Undercoat Removal Card -->
         <article class="service-card-with-image card-tint-1">
-          <picture>
-            <source type="image/avif" srcset="/assets/images/gbp-6-4da1-8c25-669a111603aa-480.avif 480w, /assets/images/gbp-6-4da1-8c25-669a111603aa-960.avif 960w" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 400px">
-            <img src="/assets/images/gbp-6-4da1-8c25-669a111603aa.jpg" srcset="/assets/images/gbp-6-4da1-8c25-669a111603aa-480.webp 480w, /assets/images/gbp-6-4da1-8c25-669a111603aa-960.webp 960w" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 400px" alt="Dog undercoat removal and brush-out service" class="service-card__image" width="640" height="400" loading="lazy">
-          </picture>
+          <div class="service-card__image">
+            <span class="svc-cover svc-cover--1" aria-hidden="true"><?php icon('layers', 76); ?></span>
+          </div>
           <div class="service-card__body">
             <div class="service-card__icon">
               <?php icon('layers', 32); ?>
@@ -188,10 +198,9 @@ include $_SERVER['DOCUMENT_ROOT'] . '/includes/head.php';
 
         <!-- Nail Trimming Card -->
         <article class="service-card-with-image card-tint-2">
-          <picture>
-            <source type="image/avif" srcset="/assets/images/gbp-6-4622-9af7-147f52a3bb34-480.avif 480w, /assets/images/gbp-6-4622-9af7-147f52a3bb34-960.avif 960w" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 400px">
-            <img src="/assets/images/gbp-6-4622-9af7-147f52a3bb34.jpg" srcset="/assets/images/gbp-6-4622-9af7-147f52a3bb34-480.webp 480w, /assets/images/gbp-6-4622-9af7-147f52a3bb34-960.webp 960w" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 400px" alt="Dog nail trimming service" class="service-card__image" width="640" height="400" loading="lazy">
-          </picture>
+          <div class="service-card__image">
+            <span class="svc-cover svc-cover--2" aria-hidden="true"><?php icon('check-circle', 76); ?></span>
+          </div>
           <div class="service-card__body">
             <div class="service-card__icon">
               <?php icon('check-circle', 32); ?>

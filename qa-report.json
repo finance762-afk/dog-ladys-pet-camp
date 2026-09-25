@@ -9,14 +9,14 @@
   "expected_slug": "dog-ladys-pet-camp",
   "passed": true,
   "grade": "A",
-  "score_pct": 96,
+  "score_pct": 97,
   "summary": {
-    "total": 173,
-    "passed": 159,
-    "failed": 7,
+    "total": 169,
+    "passed": 156,
+    "failed": 6,
     "warn": 7,
     "blockers_failed": 0,
-    "warnings_failed": 8
+    "warnings_failed": 7
   },
   "techniques_detected": [
     {
@@ -47,7 +47,7 @@
     {
       "name": "color_mix",
       "description": "color-mix() function (modern CSS)",
-      "matches": 75
+      "matches": 80
     },
     {
       "name": "scroll_snap",
@@ -250,11 +250,11 @@
     {
       "status": "pass",
       "check": "Inline <style> block",
-      "detail": "17 CSS lines in 1 block(s)",
+      "detail": "34 CSS lines in 1 block(s)",
       "file": "index.php",
       "severity": "blocker",
       "expected": null,
-      "actual": "17",
+      "actual": "34",
       "fix_hint": "",
       "section": "PHP STANDARDS"
     },
@@ -305,11 +305,11 @@
     {
       "status": "pass",
       "check": "Inline <style> block",
-      "detail": "14 CSS lines in 1 block(s)",
+      "detail": "22 CSS lines in 1 block(s)",
       "file": "services/index.php",
       "severity": "blocker",
       "expected": null,
-      "actual": "14",
+      "actual": "22",
       "fix_hint": "",
       "section": "PHP STANDARDS"
     },
@@ -371,11 +371,11 @@
     {
       "status": "pass",
       "check": "Inline <style> block",
-      "detail": "11 CSS lines in 1 block(s)",
+      "detail": "10 CSS lines in 1 block(s)",
       "file": "dog-grooming/index.php",
       "severity": "blocker",
       "expected": null,
-      "actual": "11",
+      "actual": "10",
       "fix_hint": "",
       "section": "PHP STANDARDS"
     },
@@ -404,11 +404,11 @@
     {
       "status": "pass",
       "check": "Inline <style> block",
-      "detail": "15 CSS lines in 1 block(s)",
+      "detail": "14 CSS lines in 1 block(s)",
       "file": "dog-boarding-overnight-kennel/index.php",
       "severity": "blocker",
       "expected": null,
-      "actual": "15",
+      "actual": "14",
       "fix_hint": "",
       "section": "PHP STANDARDS"
     },
@@ -426,11 +426,11 @@
     {
       "status": "pass",
       "check": "Basic tier CSS bar",
-      "detail": "593 lines (17 inline + 576 external, need \u22650)",
+      "detail": "610 lines (34 inline + 576 external, need \u22650)",
       "file": "index.php",
       "severity": "blocker",
       "expected": "0",
-      "actual": "593",
+      "actual": "610",
       "fix_hint": "",
       "section": "PHP STANDARDS"
     },
@@ -448,11 +448,11 @@
     {
       "status": "pass",
       "check": "Basic tier CSS bar",
-      "detail": "590 lines (14 inline + 576 external, need \u22650)",
+      "detail": "598 lines (22 inline + 576 external, need \u22650)",
       "file": "services/index.php",
       "severity": "blocker",
       "expected": "0",
-      "actual": "590",
+      "actual": "598",
       "fix_hint": "",
       "section": "PHP STANDARDS"
     },
@@ -1768,7 +1768,7 @@
     {
       "status": "pass",
       "check": "Hero image \u2264150KB",
-      "detail": "gbp-6-4622-9af7-147f52a3bb34.jpg: 115KB (largest image (no hero-named file))",
+      "detail": "qa-home-dedupe.png: 124KB (largest image (no hero-named file))",
       "file": "",
       "severity": "blocker",
       "expected": null,
@@ -1823,7 +1823,7 @@
     {
       "status": "pass",
       "check": "No image file > 250KB",
-      "detail": "13 referenced image path(s) checked",
+      "detail": "8 referenced image path(s) checked",
       "file": "",
       "severity": "blocker",
       "expected": null,
@@ -1865,20 +1865,9 @@
       "section": "PERFORMANCE v6.3"
     },
     {
-      "status": "pass",
-      "check": "sitemap.xml reachable",
-      "detail": "/sitemap.xml \u2192 404 on the preview host (no rewrite there), but /sitemap.php serves 15 <loc> entries \u2014 fine on Hostinger",
-      "file": "",
-      "severity": "blocker",
-      "expected": null,
-      "actual": null,
-      "fix_hint": "",
-      "section": "PERFORMANCE v6.3"
-    },
-    {
       "status": "warn",
-      "check": "Preview host lacks the /sitemap.xml rewrite",
-      "detail": "Add to /etc/nginx/sites-available/preview: location = /sitemap.xml { try_files /sitemap.xml /sitemap.php; }",
+      "check": "sitemap.xml reachable (needs --url)",
+      "detail": "Pass --url https://preview-<slug>.pageone.cloud (or the live domain) to fetch /sitemap.xml",
       "file": "",
       "severity": "info",
       "expected": null,
@@ -1889,7 +1878,7 @@
     {
       "status": "pass",
       "check": "Homepage image payload \u2264600KB (static estimate)",
-      "detail": "~97KB eager at 960w candidates (+190KB lazy, loaded on scroll)",
+      "detail": "~97KB eager at 960w candidates (+0KB lazy, loaded on scroll)",
       "file": "",
       "severity": "warning",
       "expected": null,
@@ -1900,7 +1889,7 @@
     {
       "status": "pass",
       "check": "Total page weight \u22641.5MB (static estimate)",
-      "detail": "~455KB uncompressed HTML+CSS+JS+fonts+images",
+      "detail": "~268KB uncompressed HTML+CSS+JS+fonts+images",
       "file": "",
       "severity": "warning",
       "expected": null,
@@ -1931,42 +1920,9 @@
       "section": "PERFORMANCE v6.3"
     },
     {
-      "status": "pass",
-      "check": "Lighthouse mobile Performance \u226590",
-      "detail": "94 (runs [80, 94, 94]) \u2014 LCP 3.0s \u00b7 CLS 0.016 \u00b7 TBT 0ms \u00b7 330KB",
-      "file": "",
-      "severity": "blocker",
-      "expected": null,
-      "actual": null,
-      "fix_hint": "",
-      "section": "PERFORMANCE v6.3"
-    },
-    {
-      "status": "fail",
-      "check": "Lighthouse mobile Accessibility \u226595",
-      "detail": "94 \u2014 failing audits: color-contrast, heading-order",
-      "file": "",
-      "severity": "warning",
-      "expected": null,
-      "actual": null,
-      "fix_hint": "Open the Lighthouse Accessibility audit list for https://preview-dog-ladys-pet-camp.pageone.cloud",
-      "section": "PERFORMANCE v6.3"
-    },
-    {
-      "status": "pass",
-      "check": "Lighthouse mobile Best Practices \u226595",
-      "detail": "100",
-      "file": "",
-      "severity": "warning",
-      "expected": null,
-      "actual": null,
-      "fix_hint": "",
-      "section": "PERFORMANCE v6.3"
-    },
-    {
       "status": "warn",
-      "check": "Lighthouse mobile SEO \u226595",
-      "detail": "61 on a preview host (X-Robots noindex + robots block depress the SEO category by design) \u2014 re-check on the live domain",
+      "check": "Lighthouse mobile (needs --url)",
+      "detail": "Pass --url to run qa/lighthouse-mobile.mjs (Performance \u226590 FAIL, other categories \u226595 WARN)",
       "file": "",
       "severity": "info",
       "expected": null,
@@ -2041,17 +1997,6 @@
       "actual": null,
       "fix_hint": "Add missing sections to llms.txt",
       "section": "AEO CONTENT"
-    },
-    {
-      "status": "fail",
-      "check": "Lighthouse mobile Accessibility \u226595",
-      "detail": "94 \u2014 failing audits: color-contrast, heading-order",
-      "file": "",
-      "severity": "warning",
-      "expected": null,
-      "actual": null,
-      "fix_hint": "Open the Lighthouse Accessibility audit list for https://preview-dog-ladys-pet-camp.pageone.cloud",
-      "section": "PERFORMANCE v6.3"
     }
   ],
   "warnings": [
@@ -2112,8 +2057,8 @@
     },
     {
       "status": "warn",
-      "check": "Preview host lacks the /sitemap.xml rewrite",
-      "detail": "Add to /etc/nginx/sites-available/preview: location = /sitemap.xml { try_files /sitemap.xml /sitemap.php; }",
+      "check": "sitemap.xml reachable (needs --url)",
+      "detail": "Pass --url https://preview-<slug>.pageone.cloud (or the live domain) to fetch /sitemap.xml",
       "file": "",
       "severity": "info",
       "expected": null,
@@ -2123,8 +2068,8 @@
     },
     {
       "status": "warn",
-      "check": "Lighthouse mobile SEO \u226595",
-      "detail": "61 on a preview host (X-Robots noindex + robots block depress the SEO category by design) \u2014 re-check on the live domain",
+      "check": "Lighthouse mobile (needs --url)",
+      "detail": "Pass --url to run qa/lighthouse-mobile.mjs (Performance \u226590 FAIL, other categories \u226595 WARN)",
       "file": "",
       "severity": "info",
       "expected": null,

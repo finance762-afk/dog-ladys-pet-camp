@@ -13,8 +13,11 @@ $metaDescription = $pageDescription;
 $canonicalUrl    = $siteUrl . '/bath-blow-dry/';
 
 /* Hero image */
-$heroImage    = 'gbp-6-4622-9af7-147f52a3bb34.jpg';
-$heroImageAlt = "Dog bath and blow dry service at Dog Lady's Pet Camp in Franklin, Ohio";
+/* CLIENT PHOTO SLOT — this page uses the photo-free .hero--interior variant
+   (only one client photo exists and it is used once, on the homepage hero).
+   When a photo for this service arrives, add it to /assets/images/ with
+   -480/-960/-1600 webp+avif variants and switch the hero to .hero-grid--visual
+   with a <picture> (loading="eager" fetchpriority="high", alt mentioning Franklin, OH). */
 
 /* Service-specific FAQs */
 $serviceFaqs = [
@@ -72,7 +75,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/includes/head.php';
 
 <!-- Page-specific styles -->
 <style id="bath-page-styles">
-  .bath-hero { background: var(--color-paper); min-height: 460px; }
+  .bath-hero { background: var(--color-paper); }
   .bath-details .detail-card { background: var(--color-surface); padding: var(--space-xl); border-radius: var(--radius-lg); margin-top: var(--space-lg); }
   .bath-details .detail-card h3 { font-size: var(--fs-lg); margin-bottom: var(--space-md); color: var(--color-ink); }
   .bath-details .detail-card ul { list-style: none; padding: 0; display: grid; gap: var(--space-sm); }

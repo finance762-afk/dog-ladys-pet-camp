@@ -13,8 +13,11 @@ $metaDescription = $pageDescription;
 $canonicalUrl    = $siteUrl . '/dog-grooming/';
 
 /* Hero image */
-$heroImage    = 'gbp-6-4da1-8c25-669a111603aa.jpg';
-$heroImageAlt = "Professional dog grooming at Dog Lady's Pet Camp in Franklin, Ohio";
+/* CLIENT PHOTO SLOT — this page uses the photo-free .hero--interior variant
+   (only one client photo exists and it is used once, on the homepage hero).
+   When a photo for this service arrives, add it to /assets/images/ with
+   -480/-960/-1600 webp+avif variants and switch the hero to .hero-grid--visual
+   with a <picture> (loading="eager" fetchpriority="high", alt mentioning Franklin, OH). */
 
 /* Service-specific FAQs */
 $serviceFaqs = [
@@ -80,8 +83,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/includes/head.php';
 
 <!-- Page-specific styles -->
 <style id="grooming-page-styles">
-  .grooming-hero { background: var(--color-surface); min-height: 460px; }
-  .grooming-hero .hero-visual__img { object-position: 50% 35%; }
+  .grooming-hero { background: var(--color-surface); }
   .grooming-services .services-breakdown { display: grid; gap: var(--space-lg); margin-top: var(--space-2xl); }
   .grooming-services .service-row { background: var(--color-paper); border-radius: var(--radius-lg); padding: var(--space-xl); display: grid; grid-template-columns: auto 1fr; gap: var(--space-lg); align-items: start; }
   .grooming-services .service-row svg { color: var(--color-accent); flex-shrink: 0; margin-top: 0.2rem; }
