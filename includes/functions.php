@@ -149,7 +149,7 @@ if (!function_exists('icon')) {
      * @return void Echoes the SVG markup
      */
     function icon($name, $size = 24) {
-        $iconPath = $_SERVER['DOCUMENT_ROOT'] . '/../crm/references/lucide-icons/' . $name . '.svg';
+        $iconPath = $_SERVER['DOCUMENT_ROOT'] . '/references/lucide-icons/' . $name . '.svg';
 
         if (file_exists($iconPath)) {
             $svg = file_get_contents($iconPath);

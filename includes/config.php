@@ -11,6 +11,7 @@ $slug        = 'dog-ladys-pet-camp';              // MUST equal the build direct
 $siteName    = "Dog Lady's Pet Camp";
 $tagline     = 'Dogs-only boarding & grooming in Franklin, Ohio';
 $ownerName   = 'April Davidson';
+$tier        = 'basic';                            // build-plan.json tier — gates nav/footer sections
 $industry    = 'other';                            // pet boarding & grooming (dogs only)
 $description = "Dog Lady's Pet Camp is a dogs-only boarding and grooming facility at 4265 Pennyroyal Rd in Franklin, Ohio, serving Franklin-area pet owners since 2000. Services include overnight kennel boarding and professional dog grooming for dogs of all breeds and sizes.";
 
