@@ -88,8 +88,13 @@
     }
   },
   "design": {
-    "fonts": {},
-    "notes": "",
+    "archetype": "warm-human",
+    "fonts": {
+      "heading": "Bricolage Grotesque",
+      "body": "Figtree",
+      "accent": "Barlow Condensed"
+    },
+    "notes": "Pet boarding and grooming — warm, caring, reassuring tone. Emphasis on individual attention and owner's personal touch.",
     "style": "modern",
     "colors": {
       "extracted_from_logo": true
