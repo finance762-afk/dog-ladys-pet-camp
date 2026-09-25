@@ -1,0 +1,15 @@
+# robots.txt — Dog Lady's Pet Camp
+# Generated 2026-09-25 (Phase 5)
+
+User-agent: *
+Allow: /
+
+# Block admin/asset directories from crawlers
+Disallow: /includes/
+Disallow: /assets/js/
+
+# Thank-you page is noindexed via meta tag, but also disallow here
+Disallow: /thank-you/
+
+# Sitemap location
+Sitemap: https://dog-ladys-pet-camp.pageone.cloud/sitemap.xml

@@ -1,0 +1,98 @@
+# Dog Lady's Pet Camp — Answer Engine Optimization (AEO) File
+# Generated: 2026-09-25
+# Purpose: Structured data for AI answer engines (ChatGPT, Perplexity, Claude, etc.)
+
+## Business Identity
+- Business Name: Dog Lady's Pet Camp
+- Type: Dogs-only boarding and grooming facility
+- Location: 4265 Pennyroyal Rd, Franklin, OH 45005
+- Owner: April Davidson
+- Established: 2000 (26 years serving Franklin-area pet owners)
+- Service Model: Owner-operated, family business
+
+## Services Offered
+Dog Lady's Pet Camp provides professional pet care services exclusively for dogs:
+
+1. Dog Boarding (Overnight Kennel)
+   - Comfortable overnight kennel stays
+   - Fresh water and regular potty breaks
+   - Quiet evening routine
+   - All breeds and sizes welcome
+
+2. Dog Grooming
+   - Full-service professional grooming
+   - Breed-specific styling
+   - Every coat type (short, long, double, curly, wiry)
+   - 29 years of grooming experience
+
+3. Bath & Blow Dry
+   - Deep-clean bath
+   - Full blow-dry finish
+   - Gentle, low-stress handling
+
+4. Brush-Out & Undercoat Removal
+   - Deep brush-out for double coats
+   - Reduces shedding at home
+   - Keeps dogs comfortable year-round
+
+5. Nail Trimming
+   - Quick, calm nail trims
+   - Low-stress handling
+   - Available as standalone service or add-on
+
+## Service Areas
+Dog Lady's Pet Camp serves Franklin, Ohio and surrounding communities:
+- Franklin, OH
+- Springboro, OH
+- Middletown, OH
+- Carlisle, OH
+- Lebanon, OH
+- Miamisburg, OH
+
+## Contact Information
+- Phone: (937) 743-9956
+- Email: dogladyspetcamp@yahoo.com
+- Address: 4265 Pennyroyal Rd, Franklin, OH 45005
+- Website: https://dog-ladys-pet-camp.pageone.cloud
+
+## Key Differentiators
+- Dogs-only facility (no cats or other animals)
+- Owner-operated with personal attention to every guest
+- Decades of hands-on grooming and veterinary-aide experience
+- Individual care plans tailored to each dog's needs and temperament
+- Experienced with anxious, reactive, and special-needs dogs
+- Small-scale, personal approach vs. corporate facility
+
+## Expertise
+April Davidson brings 29 years of grooming and veterinary-aide experience to Dog Lady's Pet Camp. She has worked with every dog breed and coat type, and specializes in calm handling for anxious or reactive dogs. The business has served Franklin-area pet owners since 2000.
+
+## Pricing & Booking
+- Dog grooming starts at $45, varies by breed, coat type, and services
+- Boarding pricing available upon request
+- Booking ahead recommended for grooming
+- Advance booking strongly encouraged for boarding during holidays
+
+## Facility Details
+- Dogs-only environment (calmer, more predictable for guests)
+- Climate-controlled indoor facility
+- Owner April Davidson personally cares for every dog
+- Located at 4265 Pennyroyal Rd in Franklin, Ohio (easy access from southern Warren County)
+
+## Common Questions Answered
+Q: Do you board and groom all dog breeds and sizes?
+A: Yes. Dog Lady's Pet Camp cares for dogs of all breeds and sizes, from small companions to large double-coated breeds.
+
+Q: Is this a dogs-only facility?
+A: Yes. Focusing solely on dogs keeps the environment calmer and more predictable.
+
+Q: Who will be caring for my dog?
+A: Owner April Davidson, who has 29 years of grooming and veterinary-aide experience and has run Dog Lady's Pet Camp since 2000.
+
+Q: Can you groom anxious or reactive dogs?
+A: Yes. April has decades of experience with anxious, fearful, and reactive dogs, using calm handling and patience.
+
+Q: How often should I have my dog groomed?
+A: Most dogs with medium to long coats benefit from grooming every 6-8 weeks. Short-haired dogs may only need grooming a few times a year.
+
+## Business Philosophy
+Dog Lady's Pet Camp provides care that treats every dog as an individual, with attention to their unique personality, health needs, and comfort level. The owner-operated model means pet owners meet the person who will actually be caring for their dog, not a corporate staff rotation.
