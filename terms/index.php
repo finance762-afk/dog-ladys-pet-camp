@@ -83,7 +83,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/includes/head.php';
 
       <h2>3. Health & Vaccination Requirements</h2>
       <p>
-        All dogs must be up to date on vaccinations, including rabies, distemper, and bordetella (kennel cough). Proof of vaccination may be required. Dogs showing signs of illness will not be accepted for boarding or grooming.
+        Dogs must be up to date on the vaccinations Dog Lady's Pet Camp requires at the time of booking; ask when you reserve and bring current records to check-in. Dogs showing signs of illness will not be accepted for boarding or grooming.
       </p>
 
       <h2>4. Liability & Assumption of Risk</h2>
