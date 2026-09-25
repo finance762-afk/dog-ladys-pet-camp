@@ -1,0 +1,267 @@
+{
+  "seo": {
+    "serp_context": null,
+    "target_radius": 30,
+    "primary_keyword": "dog boarding Franklin OH",
+    "secondary_keywords": [
+      "dog grooming Franklin Ohio",
+      "dog kennel Springboro",
+      "pet boarding near me"
+    ]
+  },
+  "tier": "basic",
+  "email": "dogladyspetcamp@yahoo.com",
+  "pages": [
+    {
+      "slug": "tree-shrub-services",
+      "type": "service_group",
+      "title": "Tree & Shrub Services in Franklin, OH",
+      "sections": "hero, service_cards_grid, individual_service_details, process, cta",
+      "services": [
+        "Brush-Out & Undercoat Removal",
+        "Nail Trimming"
+      ],
+      "primary_keyword": "brush-out & undercoat removal Franklin OH"
+    },
+    {
+      "slug": "bath-blow-dry",
+      "type": "service",
+      "title": "Bath & Blow Dry in Franklin, OH",
+      "sections": "hero, service_details, process, testimonials, cta",
+      "services": [
+        "Bath & Blow Dry"
+      ],
+      "primary_keyword": "bath & blow dry Franklin OH"
+    },
+    {
+      "slug": "dog-boarding-overnight-kennel",
+      "type": "service",
+      "title": "Dog Boarding (overnight kennel) in Franklin, OH",
+      "sections": "hero, service_details, process, testimonials, cta",
+      "services": [
+        "Dog Boarding (overnight kennel)"
+      ],
+      "primary_keyword": "dog boarding (overnight kennel) Franklin OH"
+    },
+    {
+      "slug": "dog-grooming",
+      "type": "service",
+      "title": "Dog Grooming in Franklin, OH",
+      "sections": "hero, service_details, process, testimonials, cta",
+      "services": [
+        "Dog Grooming"
+      ],
+      "primary_keyword": "dog grooming Franklin OH"
+    }
+  ],
+  "phone": "(937) 743-9956",
+  "assets": {
+    "logo": null,
+    "images": [
+      {
+        "alt": "Dog Lady's Pet Camp cover photo",
+        "url": "https://db.pageone.cloud/storage/v1/object/public/client-assets/dog-ladys-pet-camp/processed/main_image.webp",
+        "page": null,
+        "role": null,
+        "caption": "",
+        "context": "cover",
+        "storage_path": null,
+        "quality_score": null
+      },
+      {
+        "alt": "Dog Lady's Pet Camp cover photo",
+        "url": "https://db.pageone.cloud/storage/v1/object/public/client-assets/dog-ladys-pet-camp/processed/main_image.webp",
+        "page": null,
+        "role": null,
+        "caption": "",
+        "context": "cover",
+        "storage_path": null,
+        "quality_score": null
+      }
+    ],
+    "page_allocations": null,
+    "recommended_hero_image": {
+      "alt": "Dog Lady's Pet Camp cover photo",
+      "url": "https://db.pageone.cloud/storage/v1/object/public/client-assets/dog-ladys-pet-camp/processed/main_image.webp",
+      "context": "cover",
+      "quality_score": null
+    }
+  },
+  "design": {
+    "fonts": {},
+    "notes": "",
+    "style": "modern",
+    "colors": {
+      "extracted_from_logo": true
+    },
+    "logo_analysis": {}
+  },
+  "domain": "dog-ladys-pet-camp",
+  "phases": [
+    {
+      "name": "scaffold",
+      "phase": 1,
+      "status": "pending"
+    },
+    {
+      "name": "nav_footer_head",
+      "phase": 2,
+      "status": "pending"
+    },
+    {
+      "name": "homepage",
+      "phase": 3,
+      "status": "pending"
+    },
+    {
+      "name": "inner_pages",
+      "phase": 4,
+      "status": "pending"
+    },
+    {
+      "name": "seo_aeo_deploy",
+      "phase": 5,
+      "status": "pending"
+    }
+  ],
+  "address": {
+    "zip": "45005",
+    "city": "Franklin",
+    "state": "OH",
+    "street": "4265 Pennyroyal Rd"
+  },
+  "content": {
+    "usps": [
+      "Serving Franklin-area pet owners since 2000",
+      "29 years of grooming and veterinary-aide experience",
+      "Family owned, dogs-only facility"
+    ],
+    "years": 26,
+    "insurance": "",
+    "description": "Dog Lady's Pet Camp is a dogs-only boarding and grooming facility located at 4265 Pennyroyal Rd in Franklin, Ohio, serving Franklin-area pet owners since 2000. Services include kennel boarding and professional dog grooming for dogs of all breeds and sizes.",
+    "certifications": []
+  },
+  "reviews": [],
+  "tagline": "",
+  "industry": "other",
+  "services": [
+    "Dog Boarding (overnight kennel)",
+    "Dog Grooming",
+    "Bath & Blow Dry",
+    "Brush-Out & Undercoat Removal",
+    "Nail Trimming"
+  ],
+  "owner_name": "April Davidson",
+  "client_slug": "dog-ladys-pet-camp",
+  "form_action": "https://db.pageone.cloud/functions/v1/leads/dog-ladys-pet-camp",
+  "github_repo": "",
+  "web_sources": [],
+  "company_name": "Dog Lady's Pet Camp",
+  "integrations": {
+    "geo": null,
+    "bbb_url": null,
+    "financing": null,
+    "accepts_sms": null,
+    "gbp_place_id": "ChIJixajeeRhQIgR5k4knnGLPSs",
+    "gbp_map_embed": null,
+    "directions_url": "https://www.google.com/maps/dir/?api=1&destination=place_id:ChIJixajeeRhQIgR5k4knnGLPSs",
+    "elfsight_embed": null,
+    "scheduling_url": null,
+    "review_request_url": "https://search.google.com/local/writereview?placeid=ChIJixajeeRhQIgR5k4knnGLPSs",
+    "certification_links": []
+  },
+  "service_areas": [
+    "Franklin",
+    "Springboro",
+    "Middletown",
+    "Carlisle",
+    "Lebanon",
+    "Miamisburg"
+  ],
+  "address_public": true,
+  "business_hours": "",
+  "image_curation": null,
+  "research_brief": {
+    "gbp": null,
+    "brief": {
+      "faqs": [
+        {
+          "a": "All dogs are supervised by trained staff with experience in dog behavior and body language. We maintain a dog-to-staff ratio that ensures personal attention, monitor play for any signs of stress or injury, and keep detailed records of each day. We also use cameras in common areas so owners can check in anytime.",
+          "q": "How do you ensure my dog is safe and supervised all day?"
+        },
+        {
+          "a": "We conduct a thorough consultation before the first visit to understand your dog's personality, triggers, and needs. We create individualized care plans, start with shorter stays to build confidence, and use positive reinforcement. Our staff has experience managing anxiety and can discuss specialized approaches tailored to your dog.",
+          "q": "What if my dog has separation anxiety or behavioral issues?"
+        },
+        {
+          "a": "Daycare includes supervised play, socialization with other dogs, meals, and basic care from 7am–6pm. Overnight boarding adds a comfortable sleeping space, extra potty breaks, and our quieter evening routine. Both include fresh water, regular breaks, and photo updates. Ask about our customized packages for dogs with special needs.",
+          "q": "What's included in your boarding vs. daycare packages?"
+        },
+        {
+          "a": "Yes. We can administer medications, manage special diets, and accommodate health conditions with advance notice. Please provide detailed instructions, medications in their original containers, and a veterinary contact. We ask for a $25 fee for medication administration to ensure accuracy and safety.",
+          "q": "Do you board dogs with medical needs or dietary restrictions?"
+        },
+        {
+          "a": "We carefully assess temperament during intake and may recommend one-on-one care rather than group play for dogs that do better with less social stimulation. We never force interaction. For foster dogs or dogs new to group settings, we use gradual introductions and reward-based training to build confidence and social skills safely.",
+          "q": "How do you handle aggressive or reactive dogs?"
+        }
+      ],
+      "about_angle": "Lead with the owner's personal passion for dogs and how that translates to better care: emphasize hands-on oversight, commitment to each dog's individual personality, and why a personal touch matters for pet wellbeing. Position as 'the person who cares for your dog like it's their own,' not a faceless facility.",
+      "hero_headline": "Your Dog's Favorite Place to Play",
+      "differentiators": [
+        "Experienced, certified pet care professionals with animal behavior training",
+        "Small group play with careful temperament assessment and matching",
+        "Real-time monitoring and photo/video updates for pet parents",
+        "Individualized care plans accommodating health needs, diet, medications",
+        "Clean, climate-controlled facility with indoor/outdoor play areas",
+        "Local Franklin, OH business with deep community roots and trust"
+      ],
+      "hero_subheadline": "Premium daycare and boarding where happy, socialized pups come home tired and smiling—run by someone who loves dogs as much as you do.",
+      "tone_recommendation": "Warm and reassuring with genuine expertise. Sound like a trusted friend who is also deeply knowledgeable—confident enough to address concerns directly, but never condescending. Emphasize the emotional bond (pet parents understand their dogs matter) while backing it up with professional practices. Be conversational, avoid jargon, and make safety and individual care feel personal, not corporate."
+    },
+    "competitors": [],
+    "generated_at": "2026-09-25T20:48:15.301Z",
+    "existing_site": null
+  },
+  "competitor_urls": [],
+  "phone_secondary": "",
+  "service_grouping": {
+    "cap": 4,
+    "tier": "basic",
+    "groups": [
+      {
+        "page": "Tree & Shrub Services",
+        "services": [
+          "Brush-Out & Undercoat Removal",
+          "Nail Trimming"
+        ]
+      },
+      {
+        "page": "Bath & Blow Dry",
+        "solo": true,
+        "services": [
+          "Bath & Blow Dry"
+        ]
+      },
+      {
+        "page": "Dog Boarding (overnight kennel)",
+        "solo": true,
+        "services": [
+          "Dog Boarding (overnight kennel)"
+        ]
+      },
+      {
+        "page": "Dog Grooming",
+        "solo": true,
+        "services": [
+          "Dog Grooming"
+        ]
+      }
+    ],
+    "grouped_count": 4,
+    "original_count": 5
+  },
+  "lead_notification_email": "dogladyspetcamp@yahoo.com",
+  "lead_notification_phone": "(937) 743-9956",
+  "google_business_profile_url": "https://maps.google.com/?cid=3115799837310996198&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+}
