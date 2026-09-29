@@ -173,7 +173,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/includes/head.php';
       <hr style="margin:var(--space-3xl) 0;border:none;border-top:1px solid var(--color-line)">
 
       <p style="font-size:var(--fs-sm);color:var(--color-muted);font-style:italic">
-        <strong>Disclaimer:</strong> This Cookie Policy is provided as a general template. We recommend reviewing this document with a licensed Ohio attorney before publication.
+        <strong>Disclaimer:</strong> 
       </p>
 
       <p style="margin-top:var(--space-2xl);font-size:var(--fs-sm);color:var(--color-muted)">
